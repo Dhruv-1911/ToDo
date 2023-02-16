@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WelCome to To Do </title>
+    <link rel="icon" type="image/x-icon" href="./public/assets/icon.png">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+        integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    <link href="/assets/style.css" rel="stylesheet" type="text/css" />
+    <style>
+
+
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class="h1">To Do</h1>
+    </div>
+    <div id="todo-table">
+        <form method="POST">
+            <input type="text" id="name" name="item" autocomplete="off" placeholder="Add New Item..." required />
+            <button type="submit">Add</button>
+        </form>
+        <ul>
+            <% for(let i=0 ; i < todos.length ; i++){ %>
+                <li>
+                    <%= todos[i].item %>
+                </li>
+                <% } %>
+        </ul>
+    </div>
+</body>
+
+</html>
