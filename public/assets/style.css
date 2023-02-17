@@ -27,8 +27,11 @@ body{
     border: 0;
     float: left;
     font-size: 20px;
-    color: #ffffff;
+    color: black;
     border-radius: 15px;
+}
+::placeholder{
+    color:rgb(219, 219, 219)
 }
 
 h1{

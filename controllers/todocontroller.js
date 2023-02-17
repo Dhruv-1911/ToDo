@@ -30,7 +30,6 @@ module.exports=(app)=>{
             if(err) throw err;
             // res.render('todo',{todos:req.body})
             console.log(req.body);
-           
             res.json(data);
         }) 
     });
@@ -39,7 +38,6 @@ module.exports=(app)=>{
     app.delete('/todo/:item',(req,res)=>{
         console.log(req.params.item);
         Todo.find({item: req.params.item.replace(/item/g," ")}).deleteMany((err,data)=>{
-
             if(err) throw err;
             res.json(data);
         });
